@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
-import { languages } from "./list";
-import SelectComponent from "../imputs/SelectComponent";
 import { Typography } from "@mui/material";
-import ReactCountryFlag from "react-country-flag";
 import { useTranslation } from "react-i18next";
+import ReactCountryFlag from "react-country-flag";
+
+import { languages } from "./list";
+import SelectComponent from "../inputs/SelectComponent";
 
 function ChosseLang() {
   const [lang, setLang] = useState(

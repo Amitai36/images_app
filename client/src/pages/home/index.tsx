@@ -1,13 +1,14 @@
+import { useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
-import showMorePhotoFromArtist from "../../../public/images/show_more_photo_from_artist.png";
-import seePhotoStatistics from "../../../public/images/see_photo_statistics.png";
-import seeUserStatistics from "../../../public/images/see_user_statistics.png";
-import CarouselComponent from "../../components/CarouselComponent";
-import searchImage from "../../../public/images/searchImages.png";
-import seeMoreOnMap from "../../../public/images/see_on_map.png";
 import SearchImg from "../../components/SearchImg";
-import { useLocation } from "react-router-dom";
+import CarouselComponent from "../../components/CarouselComponent";
+
+import seeMoreOnMap from "../../../public/images/see_on_map.png";
+import searchImage from "../../../public/images/searchImages.png";
+import seeUserStatistics from "../../../public/images/see_user_statistics.png";
+import seePhotoStatistics from "../../../public/images/see_photo_statistics.png";
+import showMorePhotoFromArtist from "../../../public/images/show_more_photo_from_artist.png";
 
 function Home() {
   const { t } = useTranslation();
@@ -19,6 +20,7 @@ function Home() {
     { imgSrc: seePhotoStatistics, lable: t("seePhotoStatistics") },
   ];
   const { pathname } = useLocation();
+  console.log(pathname)
 
   return (
     <div
@@ -30,7 +32,7 @@ function Home() {
         alignItems: "center",
       }}
     >
-      {pathname !== "/" && (
+      {pathname === "/" && (
         <div style={{ height: "20%" }}>
           <SearchImg />
         </div>
