@@ -1,9 +1,9 @@
-
+import SearchImg from "./components/SearchImg"
 function App() {
 
   return (
     <>
-      hello world
+      <SearchImg />
     </>
   )
 }
