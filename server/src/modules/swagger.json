@@ -1,0 +1,11 @@
+{
+    "definition": {
+      "openapi": "3.0.0",
+      "info": {
+        "title": "API Name",
+        "version": "1.0.0",
+        "description": "API Description"
+      }
+    },
+    "apis": ["**/*.ts"]
+  }
